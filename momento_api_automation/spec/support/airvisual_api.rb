@@ -15,11 +15,19 @@ module AirVisual
   # @dob = 20.years.ago(Date.today).strftime("%m-%d-%Y")
 
 
-  def verify_api_authorization
-
+  def verify_successful_api_authorization
     get_rest_url = "#{@url}" + "countries?key=" + "#{@api_key}"
     resp = RestClient.get(get_rest_url)
-    puts resp.code
     return resp.code
   end
+
+  def verify_unsuccessful_api_authorization
+    get_rest_url = "#{@url}" + "countries"
+    begin
+      RestClient.get(get_rest_url)
+    rescue => e
+      return e.response.code
+    end
+  end
+
 end
