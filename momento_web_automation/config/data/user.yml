@@ -1,0 +1,27 @@
+Personas:
+  Navi:
+    fullname:
+      fname:    Navi
+      lname:    Han
+    email_info:
+      email_address:    navihan@gmail.com
+      password: Momento
+    creditcard:
+      cc_number:       4444 3333 2222 1111
+      exp_month: 10
+      exp_year: 2022
+      sec_code: 123
+    adyen_valid_creditcard:
+      cc_number:       4444 3333 2222 1111
+      exp_month: 10
+      exp_year: 2020
+      sec_code: 737
+    country_value: AU
+    country: Australia
+    house:
+      address1: 11 Primus Road
+      city: Williams Landing
+      state: Victoria
+      state_abb: VIC
+      postcode: 3027
+    phone: 0403222638
