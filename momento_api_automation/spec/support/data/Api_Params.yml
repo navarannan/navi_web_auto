@@ -1,0 +1,6 @@
+ApiParams:
+  url:  api.airvisual.com/v2/
+  api_key:  89ebc6f3-a877-4207-9528-51b1bf33bb5e
+  country:  Australia
+  latitude: -37.906097
+  longitude:  145.053772

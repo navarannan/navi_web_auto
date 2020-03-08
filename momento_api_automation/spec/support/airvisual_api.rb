@@ -1,18 +1,18 @@
 require 'rest-client'
 require 'json'
 require 'date'
+require_relative '../../spec/support/Api_Params'
 
 module AirVisual
 
-  @url = "api.airvisual.com/v2/"
-  @api_key = "89ebc6f3-a877-4207-9528-51b1bf33bb5e"
+  # @url = "api.airvisual.com/v2/"
+  # @api_key = "89ebc6f3-a877-4207-9528-51b1bf33bb5e"
 
-  # @header_full_auth = {:authorization=> "Basic YXBwOjExMTE=", :accept => "application/json",:content_type => "application/json"}
-  # @header_basic_auth = {:authorization=> "Basic YXBwOjExMTE="}
-  # @random_no = Time.now.nsec.to_s
-  # @loyalty_email = "cottononqa" + "#{@random_no}" + "@gmail.com"
-  # @different_email = "cottonon" + "#{@random_no}" + "@gmail.com"
-  # @dob = 20.years.ago(Date.today).strftime("%m-%d-%Y")
+  @url = ApiParams.get_url
+  @api_key = ApiParams.get_api_token
+  @country = ApiParams.get_country
+  @latitude = ApiParams.get_latitude
+  @longitude = ApiParams.get_longitude
 
 
   def verify_successful_api_authorization
@@ -28,6 +28,26 @@ module AirVisual
     rescue => e
       return e.response.code
     end
+  end
+
+  def get_supported_states
+    get_rest_url = "#{@url}" + "states?country=" + "#{@country}" + "&key=" + "#{@api_key}"
+    resp = RestClient.get(get_rest_url)
+    return JSON.parse(resp)
+  end
+
+  def get_nearest_city_data
+    get_rest_url = "#{@url}" + "nearest_city?key=" + "#{@api_key}"
+    resp = RestClient.get(get_rest_url)
+    return JSON.parse(resp)
+
+  end
+
+  def get_nearest_city_data_by_coordinates
+    get_rest_url = "#{@url}" + "nearest_city?lat=" + "#{@latitude}" + "&lon=" + "#{@longitude}" + "&key=" + "#{@api_key}"
+    resp = RestClient.get(get_rest_url)
+    return JSON.parse(resp)
+
   end
 
 end
