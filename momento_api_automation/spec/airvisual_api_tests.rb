@@ -3,6 +3,7 @@ require 'json'
 require 'jsonpath'
 require 'rspec'
 require 'date'
+require_relative '../spec/support/airvisual_api'
 
 
 describe "api tests for AirVisual" do
@@ -14,3 +15,4 @@ describe "api tests for AirVisual" do
   end
 
 end
+
