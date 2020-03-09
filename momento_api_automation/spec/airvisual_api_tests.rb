@@ -50,19 +50,19 @@ describe "api tests for AirVisual" do
         },
         "current": {
             "weather": {
-                "ts": "2020-03-08T16:00:00.000Z",
-                "tp": 12,
+                "ts": "2020-03-09T16:00:00.000Z",
+                "tp": 11,
                 "pr": 1021,
-                "hu": 81,
-                "ws": 3.1,
-                "wd": 180,
-                "ic": "03n"
+                "hu": 93,
+                "ws": 2.6,
+                "wd": 290,
+                "ic": "04n"
             },
             "pollution": {
-                "ts": "2020-03-08T16:00:00.000Z",
-                "aqius": 0,
+                "ts": "2020-03-09T15:00:00.000Z",
+                "aqius": 3,
                 "mainus": "p2",
-                "aqicn": 0,
+                "aqicn": 1,
                 "maincn": "p2"
             }
         }
