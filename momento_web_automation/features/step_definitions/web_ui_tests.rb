@@ -4,10 +4,8 @@ end
 
 And(/^I search for "([^"]*)" on the home page search box$/) do |arg|
   on(HomePage) do |page|
-    # page.wait_for_ajax
     page.search_fld = arg
     @browser.send_keys :enter
-    # page.wait_for_ajax
   end
 end
 
@@ -47,13 +45,11 @@ And(/^I place a click and collect order as user "([^"]*)"$/) do |arg|
     page.fname_payment = @person['fullname']['fname']
     page.lname_payment = @person['fullname']['lname']
     page.payment_country = @person['country_value']
-    sleep 10
     page.billing_address1_element.set(@person['house']['address1'])
     page.billing_city_element.set(@person['house']['city'])
     page.billing_postcode_element.set(@person['house']['postcode'])
-    # page.cc_state_abb_element.set(@person['house']['state_abb'])
     page.cc_state_abb = @person['house']['state_abb']
     page.place_order_btn
-    sleep 20
+    sleep 10
   end
 end
