@@ -14,6 +14,16 @@ Softwares needed to run the tests locally
 Rubymine IDE
 Ruby v 2.5.5 for Windows
 Git bash for Windows
+chromedriver 
+```
+Note:- Check the version of chrome on local machine and download compatible chromedriver from 
+```
+https://chromedriver.chromium.org/
+```
+
+Copy the chromedriver to ruby bin directory, eg
+```
+C:\Ruby25-x64\bin\chromedriver.exe
 ```
 
 
