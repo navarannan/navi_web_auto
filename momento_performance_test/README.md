@@ -49,6 +49,7 @@ Execute the following on git Bash
 ```
 cd momento_performance_test/
 gem install rake bundler
+gem install ruby-jmeter
 bundle install
 ruby spec/load_test.rb
 ```
