@@ -1,6 +1,6 @@
 # Cucumber Framework
 
-Cucumber Web Automation framework for Cotton On E-Commerce 
+Cucumber Web Automation framework for PwC
 
 ## Getting Started
 
@@ -11,32 +11,34 @@ These instructions will get you a copy of the project up and running on your loc
 Softwares needed to run the tests locally
 
 ```
-Rubymine IDE
-Ruby v 2.5.5 for Windows
-Git bash for Windows
-chromedriver 
+Eclipse IDE for Java Developers
+JRE 1.8
+ChromeDriver 80.0.3987.106 
 ```
-Note:- Check the version of chrome on local machine and download compatible chromedriver from 
+Notes:- 
+1. Check the version of chrome on local machine and download compatible chromedriver from 
 ```
 https://chromedriver.chromium.org/
 ```
 
-Copy the chromedriver to ruby bin directory, eg
+Copy the chromedriver to local machine, eg
 ```
-C:\Ruby25-x64\bin\chromedriver.exe
+C:\Webdrivers\chromedriver.exe
 ```
-
+2. Maven is integrated with new versions of Eclipse. If not install Maven plugin for Eclipse
 
 ## Running the tests
 
-Clone the repository on Git. On git bash execute the following
-
-
+Clone the repository on Git
 ```
-cd momento_web_automation
-gem install rake bundler watir
-gem install testgen
-bundle install
-cucumber features/Web_UI_Tests.feature
+git clone https://github.com/navarannan/navi_web_auto
 ```
-
+Open the project "PwC" as a Meven Project in Eclipse
+```
+File>>Import>>Maven>>Existing Maven Projects
+Wait for Maven to download dependencies
+```
+Run the project as a JUnit Test
+```
+Right Click on Project Root Folder (PwC in our case)>>Run As>>JUnit Test
+```
