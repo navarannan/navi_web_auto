@@ -156,6 +156,6 @@ public class stepDefenition extends Base {
 
 	@After
 	public void cleanUp() {
-		driver.close();
+		driver.quit();
 	}
 }
