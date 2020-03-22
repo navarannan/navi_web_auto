@@ -2,6 +2,32 @@
 
 Cucumber Web Automation framework for PwC
 
+### Design Pattern
+
+The Framewrok is built using Page Object Pattern using Selenium PageFactory. The various classes used and a summary as follows
+
+### Page Classes
+```
+HomePage
+ContactUs Page
+SearchResultsPage
+```
+
+### Common Utility Functions
+```
+BasePage
+```
+
+### Common Properties for tests 
+```
+data.properties
+```
+
+### Driver Instantiation and Parsing Properties File
+```
+Base
+```
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for testing purposes.
