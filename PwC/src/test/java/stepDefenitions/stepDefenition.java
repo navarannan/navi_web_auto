@@ -59,7 +59,9 @@ public class stepDefenition extends Base {
 	@Then("^Clicking the 'Next' button on the carousel will load the next \"([^\"]*)\" featured articles$")
 	public void clicking_the_Next_button_on_the_carousel_will_load_the_next_featured_articles(String arg)
 			throws Throwable {
-		home.clickNext().click();
+//		home.clickNext().click();
+		waitForElementVisibilityAndClick(home.clickNext(), 15, "contactUs");
+
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
@@ -71,7 +73,9 @@ public class stepDefenition extends Base {
 	@Then("^Clicking the 'Previous' button on the carousel will load the previous \"([^\"]*)\" featured articles$")
 	public void clicking_the_Previous_button_on_the_carousel_will_load_the_previous_featured_articles(String arg)
 			throws Throwable {
-		home.clickPrevious().click();
+//		home.clickPrevious().click();
+		waitForElementVisibilityAndClick(home.clickPrevious(), 15, "contactUs");
+
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
