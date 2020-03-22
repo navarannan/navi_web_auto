@@ -1,0 +1,111 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Verify Carousels are displayed",
+        "description": "",
+        "id": "web-ui-tests-for-pwc-website;verify-carousels-are-displayed",
+        "after": [
+          {
+            "result": {
+              "duration": 4320913900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefenition.cleanUp()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 15254162100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I navigate to the PwC Digital Pulse website",
+            "match": {
+              "location": "stepDefenition.i_navigate_to_the_PwC_Digital_Pulse_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 33733400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am viewing the \u0027Home\u0027 page",
+            "match": {
+              "location": "stepDefenition.i_am_viewing_the_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 35535700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I am presented with a carousel displaying \"3\" featured articles",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefenition.i_am_presented_with_a_carousel_displaying_featured_articles(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3135610200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Clicking the \u0027Next\u0027 button on the carousel will load the next \"3\" featured articles",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 63
+                }
+              ],
+              "location": "stepDefenition.clicking_the_Next_button_on_the_carousel_will_load_the_next_featured_articles(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3127341900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Clicking the \u0027Previous\u0027 button on the carousel will load the previous \"3\" featured articles",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 71
+                }
+              ],
+              "location": "stepDefenition.clicking_the_Previous_button_on_the_carousel_will_load_the_previous_featured_articles(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Web UI Tests for PwC Website",
+    "description": "",
+    "id": "web-ui-tests-for-pwc-website",
+    "keyword": "Feature",
+    "uri": "WebUI_Tests.feature"
+  }
+]
