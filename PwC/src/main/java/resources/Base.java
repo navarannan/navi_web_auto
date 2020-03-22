@@ -1,6 +1,7 @@
 package resources;
 
 import java.io.FileInputStream;
+
 import java.io.IOException;
 import java.util.NoSuchElementException;
 import java.util.Properties;
@@ -15,6 +16,10 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
+
+/**
+ * Reads the properties file and instantiates the Webdriver for respective browser type
+ */
 public class Base {
 
 	public WebDriver driver;
@@ -48,6 +53,9 @@ public class Base {
 		return driver;
 	}
 
+	/**
+	 * Reads the properties file 
+	 */
 	public void readPropertiesFile() {
 
 		browserName = prop.getProperty("browser");
@@ -56,6 +64,9 @@ public class Base {
 		chromeDriverPath = prop.getProperty("chromeDriverPath");
 	}
 
+	/**
+	 * Wait for an element to be visible and click() 
+	 */
 	public void waitForElementVisibilityAndClick(WebElement element, int timeOut, String elementName) {
 		try {
 			wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(timeOut))
@@ -66,6 +77,9 @@ public class Base {
 		}
 	}
 
+	/**
+	 * Wait for an element to be visible and set text 
+	 */
 	public void waitForElementVisibilityAndSendKeys(WebElement element, int timeOut, String text) {
 		try {
 			wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(timeOut))

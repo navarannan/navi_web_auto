@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 10716024700,
+  "duration": 10691647700,
   "status": "passed"
 });
 formatter.background({
@@ -26,7 +26,7 @@ formatter.match({
   "location": "stepDefenition.i_navigate_to_the_PwC_Digital_Pulse_website()"
 });
 formatter.result({
-  "duration": 1377540800,
+  "duration": 2912918700,
   "status": "passed"
 });
 formatter.scenario({
@@ -61,7 +61,7 @@ formatter.match({
   "location": "stepDefenition.i_am_viewing_the_page()"
 });
 formatter.result({
-  "duration": 33417900,
+  "duration": 31902400,
   "status": "passed"
 });
 formatter.match({
@@ -74,7 +74,7 @@ formatter.match({
   "location": "stepDefenition.i_am_presented_with_a_carousel_displaying_featured_articles(String)"
 });
 formatter.result({
-  "duration": 39303600,
+  "duration": 34307300,
   "status": "passed"
 });
 formatter.match({
@@ -87,7 +87,7 @@ formatter.match({
   "location": "stepDefenition.clicking_the_Next_button_on_the_carousel_will_load_the_next_featured_articles(String)"
 });
 formatter.result({
-  "duration": 4254421800,
+  "duration": 3243408900,
   "status": "passed"
 });
 formatter.match({
@@ -100,15 +100,15 @@ formatter.match({
   "location": "stepDefenition.clicking_the_Previous_button_on_the_carousel_will_load_the_previous_featured_articles(String)"
 });
 formatter.result({
-  "duration": 4196172500,
+  "duration": 3225178900,
   "status": "passed"
 });
 formatter.after({
-  "duration": 4080681400,
+  "duration": 644881800,
   "status": "passed"
 });
 formatter.before({
-  "duration": 9302953200,
+  "duration": 9288822000,
   "status": "passed"
 });
 formatter.background({
@@ -127,7 +127,7 @@ formatter.match({
   "location": "stepDefenition.i_navigate_to_the_PwC_Digital_Pulse_website()"
 });
 formatter.result({
-  "duration": 1200118700,
+  "duration": 1516722100,
   "status": "passed"
 });
 formatter.scenario({
@@ -167,7 +167,7 @@ formatter.match({
   "location": "stepDefenition.i_click_on_the_Magnifying_glass_icon_to_perform_a_search()"
 });
 formatter.result({
-  "duration": 108396500,
+  "duration": 99845700,
   "status": "passed"
 });
 formatter.match({
@@ -180,21 +180,21 @@ formatter.match({
   "location": "stepDefenition.i_enter_the_text_Single_page_applications(String)"
 });
 formatter.result({
-  "duration": 302732700,
+  "duration": 317657700,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefenition.i_submit_the_search()"
 });
 formatter.result({
-  "duration": 1095462200,
+  "duration": 1105620600,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefenition.i_am_taken_to_the_search_results_page()"
 });
 formatter.result({
-  "duration": 13501000,
+  "duration": 12052600,
   "status": "passed"
 });
 formatter.match({
@@ -207,15 +207,15 @@ formatter.match({
   "location": "stepDefenition.i_am_presented_with_at_least_search_result(int)"
 });
 formatter.result({
-  "duration": 30401700,
+  "duration": 31057600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 4334228400,
+  "duration": 653562100,
   "status": "passed"
 });
 formatter.before({
-  "duration": 9295329900,
+  "duration": 9300580400,
   "status": "passed"
 });
 formatter.background({
@@ -234,7 +234,7 @@ formatter.match({
   "location": "stepDefenition.i_navigate_to_the_PwC_Digital_Pulse_website()"
 });
 formatter.result({
-  "duration": 1232967200,
+  "duration": 2657438300,
   "status": "passed"
 });
 formatter.scenario({
@@ -301,7 +301,7 @@ formatter.match({
   "location": "stepDefenition.i_select_from_the_hamburger_menu()"
 });
 formatter.result({
-  "duration": 796260700,
+  "duration": 845856800,
   "status": "passed"
 });
 formatter.match({
@@ -314,18 +314,18 @@ formatter.match({
   "location": "stepDefenition.i_am_taken_to_the_page(String)"
 });
 formatter.result({
-  "duration": 11910600,
+  "duration": 12024400,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefenition.i_am_presented_with_the_below_options_for_contacts(DataTable)"
 });
 formatter.result({
-  "duration": 237650900,
+  "duration": 236003600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 4325161300,
+  "duration": 639261100,
   "status": "passed"
 });
 });

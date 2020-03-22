@@ -10,9 +10,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import WebAutomation.PwC.BasePage;
 
+/**
+ * Page Class for Home Page of the application
+ */
 public class HomePage extends BasePage {
 
-//	public WebDriver driver;
+	/**
+	 * Page Objects on the Home Page
+	 */
 
 	@FindBy(xpath = "//a[@class=\"flex-next\"]")
 	WebElement next;
@@ -28,19 +33,24 @@ public class HomePage extends BasePage {
 
 	@FindBy(xpath = "//*[@id=\"search-input\"]")
 	WebElement searchBar;
-	
+
 	@FindBy(xpath = "//*[@id=\"wrapper\"]/header/div[1]/div/i[1]")
 	WebElement hamburgerMenu;
 
 	@FindBy(linkText = "Contact us")
 	WebElement contactUs;
 
+	/**
+	 * Initiate Page Object Factory.
+	 */
 	public HomePage(WebDriver driver) {
-//		  this.driver = driver;
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
-
+	
+	/**
+	 * Accessing Various Webelements on the Page.
+	 */
 	public WebElement clickNext() {
 		System.out.println("In Here");
 		return next;
@@ -61,14 +71,13 @@ public class HomePage extends BasePage {
 	public WebElement performSearch() {
 		return searchBar;
 	}
-	
+
 	public WebElement clickhamburgerMenu() {
 		return hamburgerMenu;
 	}
-	
+
 	public WebElement selectContactUs() {
 		return contactUs;
 	}
-	
 
 }

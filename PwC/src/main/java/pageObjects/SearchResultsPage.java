@@ -10,18 +10,29 @@ import org.openqa.selenium.support.PageFactory;
 
 import WebAutomation.PwC.BasePage;
 
+/**
+ * Page Class for Search Results Page
+ */
+
 public class SearchResultsPage extends BasePage {
 
-//	public WebDriver driver;
-
+	/**
+	 * Page Objects on the Search Results Page
+	 */
 	@FindAll({ @FindBy(xpath = "//*[@id=\"wrapper\"]/section[2]/div/div") })
 	List<WebElement> searchResults;
 
+	/**
+	 * Initiate Page Object Factory.
+	 */
 	public SearchResultsPage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 
+	/**
+	 * Accessing Various Webelements on the Page.
+	 */
 	public int numberOfSearchResults() {
 		return searchResults.size();
 	}

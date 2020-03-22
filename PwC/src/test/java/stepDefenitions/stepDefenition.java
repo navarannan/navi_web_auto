@@ -33,6 +33,7 @@ public class stepDefenition extends Base {
 
 	public static Logger log = LogManager.getLogger(stepDefenition.class.getName());
 	
+	//Before hook
 	@Before
 	public void init() throws Throwable{
 		driver = initializeDriver();
@@ -40,6 +41,7 @@ public class stepDefenition extends Base {
 
 	@Given("^I navigate to the PwC Digital Pulse website$")
 	public void i_navigate_to_the_PwC_Digital_Pulse_website() throws Throwable {
+		//log4j logger can be used for logging. Some automation projects insist on very less logging
 		log.info("Navigating to PWC homePage");
 		driver.get(home_page_url);
 	}
@@ -97,7 +99,6 @@ public class stepDefenition extends Base {
 	public void i_enter_the_text_Single_page_applications(String arg) throws Throwable {
 //		home.performSearch().sendKeys(arg);
 		waitForElementVisibilityAndSendKeys(home.performSearch(),15,arg);
-//		waitForElementVisibilityAndClick(home.selectContactUs(), 15, "contactUs");
 	}
 
 	@When("^I submit the search$")
@@ -153,7 +154,8 @@ public class stepDefenition extends Base {
 	    	assertEquals(links.get(i).getAttribute("href"), webLinks.get(i));
 	    }
 	}
-
+	
+	//After Hook
 	@After
 	public void cleanUp() {
 		driver.quit();

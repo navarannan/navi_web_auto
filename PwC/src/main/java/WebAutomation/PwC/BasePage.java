@@ -2,6 +2,9 @@ package WebAutomation.PwC;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+/**
+ * Common Utilities 
+ */
 
 public class BasePage {
 
