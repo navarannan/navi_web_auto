@@ -17,7 +17,7 @@ JRE 1.8 for Windows
 ChromeDriver 80.0.3987.106 
 ```
 Notes:- 
-1. Check the version of chrome on local machine and download compatible chromedriver from 
+### Check the version of chrome on local machine and download compatible chromedriver from 
 ```
 https://chromedriver.chromium.org/
 ```
@@ -26,13 +26,13 @@ Copy the chromedriver to local machine, eg
 ```
 C:\Webdrivers\chromedriver.exe
 ```
-2. Maven is integrated with new versions of Eclipse. If not install Maven plugin for Eclipse
+### Maven is integrated with new versions of Eclipse. If not install Maven plugin for Eclipse
 
-3. If the test is run from command line Maven can be installed from https://maven.apache.org/install.html
+### If the test is run from command line Maven can be installed from https://maven.apache.org/install.html
 
 ## Running the tests
 
-# Using Eclipse
+### Using Eclipse
 Clone the repository on Git
 ```
 git clone https://github.com/navarannan/navi_web_auto
@@ -47,7 +47,7 @@ Run the project as a JUnit Test
 Right Click on Project Root Folder (PwC in our case)>>Run As>>JUnit Test
 ```
 
-# From Windows Command Line or git Bash
+### From Windows Command Line or git Bash
 Clone the repository on Git
 ```
 git clone https://github.com/navarannan/navi_web_auto
