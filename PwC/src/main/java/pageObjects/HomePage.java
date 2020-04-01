@@ -1,14 +1,16 @@
 package pageObjects;
 
+import java.io.IOException;
 import java.util.List;
 
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-import WebAutomation.PwC.BasePage;
+import com.cucumber.listener.Reporter;
+
+import utils.Constants;
 
 /**
  * Page Class for Home Page of the application
@@ -19,65 +21,66 @@ public class HomePage extends BasePage {
 	 * Page Objects on the Home Page
 	 */
 
-	@FindBy(xpath = "//a[@class=\"flex-next\"]")
-	WebElement next;
+	public @FindBy(xpath = "//a[@class=\"flex-next\"]") WebElement next;
+	public @FindBy(xpath = "//a[@class=\"flex-prev\"]") WebElement previous;
+	public @FindAll({ @FindBy(xpath = "//div[@id=\"banners\"]/div[2]/ul/li[2]/div") }) List<WebElement> banners;
+	public @FindBy(xpath = "//*[@id=\"wrapper\"]/header/div[1]/div/i[2]") WebElement search;
+	public @FindBy(xpath = "//*[@id=\"search-input\"]") WebElement searchBar;
+	public @FindBy(xpath = "//*[@id=\"wrapper\"]/header/div[1]/div/i[1]") WebElement hamburgerMenu;
+	public @FindBy(linkText = "Contact us") WebElement contactUs;
 
-	@FindBy(xpath = "//a[@class=\"flex-prev\"]")
-	WebElement previous;
-
-	@FindAll({ @FindBy(xpath = "//div[@id=\"banners\"]/div[2]/ul/li[2]/div") })
-	List<WebElement> banners;
-
-	@FindBy(xpath = "//*[@id=\"wrapper\"]/header/div[1]/div/i[2]")
-	WebElement search;
-
-	@FindBy(xpath = "//*[@id=\"search-input\"]")
-	WebElement searchBar;
-
-	@FindBy(xpath = "//*[@id=\"wrapper\"]/header/div[1]/div/i[1]")
-	WebElement hamburgerMenu;
-
-	@FindBy(linkText = "Contact us")
-	WebElement contactUs;
-
-	/**
-	 * Initiate Page Object Factory.
-	 */
-	public HomePage(WebDriver driver) {
-		super(driver);
-		PageFactory.initElements(driver, this);
+	public HomePage() {
+		super();
 	}
 	
 	/**
 	 * Accessing Various Webelements on the Page.
+	 * @throws IOException 
 	 */
-	public WebElement clickNext() {
-		System.out.println("In Here");
-		return next;
+	
+	public HomePage getHomePage() throws IOException {
+		Reporter.addStepLog("Accessing PWC Homepage");
+		driver.get(Constants.HOME_PAGE_URL);
+		return new HomePage();
+	}
+	public HomePage clickNext() {
+		waitForElementVisibilityAndClick(next, 15, "Next");
+		return new HomePage();
 	}
 
-	public WebElement clickPrevious() {
-		return previous;
+	public HomePage clickPrevious() {
+		waitForElementVisibilityAndClick(previous, 15, "Previous");
+		return new HomePage();
 	}
 
 	public int numberOfFeaturedArticles() {
 		return banners.size();
 	}
 
-	public WebElement clickSearch() {
-		return search;
+	public HomePage clickSearch() {
+		waitForElementVisibilityAndClick(search, 15, "Search");
+		return new HomePage();
 	}
 
-	public WebElement performSearch() {
-		return searchBar;
+	public HomePage performSearch(String searchString) {
+		waitForElementVisibilityAndSendKeys(searchBar, 15, searchString);
+		return new HomePage();
 	}
 
-	public WebElement clickhamburgerMenu() {
-		return hamburgerMenu;
+	public HomePage submitSearch() {
+		searchBar.sendKeys(Keys.ENTER);
+		return new HomePage();
 	}
 
-	public WebElement selectContactUs() {
-		return contactUs;
+	public HomePage clickhamburgerMenu() {
+		waitForElementVisibilityAndClick(hamburgerMenu, 15, "hamburgerMenu");
+		return new HomePage();
 	}
+
+	public HomePage selectContactUs() {
+		waitForElementVisibilityAndClick(contactUs, 15, "contactUs");
+		return new HomePage();
+	}
+
 
 }

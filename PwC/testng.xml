@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="WEBUI Tests">
+	<test name="Cucumber Tests" junit="true">
+		<classes>
+			<class name="runners.TestRunner"/>
+			<!--Other runner classes -->
+		</classes>
+	</test>
+</suite>

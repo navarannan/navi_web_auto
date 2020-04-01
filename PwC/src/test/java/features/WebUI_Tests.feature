@@ -4,6 +4,7 @@ Background:
 
 	Given I navigate to the PwC Digital Pulse website 
 	
+	@smoke
 Scenario: Verify Carousels are displayed 
 
 	When I am viewing the 'Home' page 
@@ -11,6 +12,7 @@ Scenario: Verify Carousels are displayed
 	And Clicking the 'Next' button on the carousel will load the next "3" featured articles 
 	And Clicking the 'Previous' button on the carousel will load the previous "3" featured articles 
 	
+	@smoke
 Scenario: Verify User can perform Search 
 
 	When I click on the 'Magnifying glass' icon to perform a search 
@@ -19,7 +21,8 @@ Scenario: Verify User can perform Search
 	Then I am taken to the search results page 
 	And I am presented with at least "1" search result 
 	
-Scenario: Verify the links on Contact US page 
+	@smoke
+Scenario: Verify the links on Contact US page  
 
 	When I select 'Contact us' from the hamburger menu
 	Then I am taken to the "Contact us" page 
