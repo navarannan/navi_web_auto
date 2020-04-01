@@ -1,5 +1,7 @@
 # Cucumber Framework
 
+Note - I have got some free time due to Covid lockdown which enabled me to refactor the framework and add reporting feature
+
 Cucumber Web Automation framework for PwC
 
 ### Design Pattern
