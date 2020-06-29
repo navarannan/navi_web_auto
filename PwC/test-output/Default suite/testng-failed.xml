@@ -4,11 +4,10 @@
   <test verbose="2" name="Default test">
     <classes>
       <class name="pageObjects.HomePage"/>
+      <class name="utils.DriverFactory"/>
       <class name="stepDefenitions.stepDefenition"/>
-      <class name="utils.ReadPropertiesFile"/>
       <class name="pageObjects.ContactUsPage"/>
       <class name="utils.Constants"/>
-      <class name="utils.Base"/>
       <class name="runners.TestRunner"/>
       <class name="pageObjects.SearchResultsPage"/>
       <class name="pageObjects.BasePage"/>

@@ -9,6 +9,7 @@ import org.testng.annotations.AfterClass;
 import com.cucumber.listener.Reporter;
 
 import cucumber.api.CucumberOptions;
+//import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 import pageObjects.BasePage;
@@ -17,13 +18,14 @@ import pageObjects.BasePage;
 @CucumberOptions(
 		features = "src/test/java/features",
 		glue = "stepDefenitions",
-		monochrome = true,
-		dryRun = false,
+		monochrome = true,//Avoid junk characters in console while showing the o/p of feature run
+		dryRun = false,//Performs a dry run, to check if all the steps are correct
 		tags = {"@smoke"},
 		plugin= {
-				"pretty", "html:target/cucumber", "json:target/cucumber.json",
+				"pretty", //detailed execution log in the console
+				"html:target/cucumber", "json:target/cucumber.json",
 				"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"
-		}
+		}//plugin is used for reports
 		)
 public class TestRunner extends AbstractTestNGCucumberTests {
 	@AfterClass
@@ -31,5 +33,5 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 		Reporter.loadXMLConfig(new File(System.getProperty("user.dir") + "\\src\\main\\java\\utils\\ReportsConfig.xml"));
 		BasePage.copyLatestExtentReport();
 	}
-
+ 
 }

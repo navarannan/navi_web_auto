@@ -4,14 +4,14 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import pageObjects.BasePage;
-import utils.Base;
+import utils.DriverFactory;
 
-public class MasterHooks extends Base {
+public class MasterHooks extends DriverFactory {
 	
 	//Before hook
 	@Before
 	public void init() throws Throwable{
-		getDriver();
+		driver = getDriver();
 	}
 
 	//After Hook
@@ -24,7 +24,7 @@ public class MasterHooks extends Base {
 				driver.quit();
 				driver = null;
 			}
-			if(driver != null) {
+			if(driver != null) { //Scenario Pass
 				driver.manage().deleteAllCookies();
 				driver.quit();
 				driver = null;
