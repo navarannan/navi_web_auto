@@ -14,4 +14,16 @@
       <class name="stepDefenitions.MasterHooks"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)" parallel="none">
+    <classes>
+      <class name="runners.TestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="writeExtentReport"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- runners.TestRunner -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

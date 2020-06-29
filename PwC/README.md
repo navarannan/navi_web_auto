@@ -1,17 +1,20 @@
 # Cucumber Framework
 
-Note - I have got some free time due to Covid lockdown which enabled me to refactor the framework and add reporting feature
-
 Cucumber Web Automation framework for PwC
 
 ### Design Pattern
 
-The Framewrok is built using Page Object Pattern using Selenium PageFactory. The various classes used and a summary as follows
+The Framewrok is built using Page Object Model Design Pattern using Selenium PageFactory. The various classes used and a summary as follows
+
+### DSL language/Feature File
+```
+WebUI_Tests.feature
+```
 
 ### Page Classes
 ```
 HomePage
-ContactUs Page
+ContactUsPage
 SearchResultsPage
 ```
 
@@ -20,15 +23,27 @@ SearchResultsPage
 BasePage
 ```
 
+### Driver instantiation
+```
+DriverFactory
+```
+
+## Cucumber Runner
+```
+TestRunner
+```
+
+
 ### Common Properties for tests 
 ```
 data.properties
 ```
 
-### Driver Instantiation and Parsing Properties File
+### Hooks 
 ```
-Base
+MasterHooks
 ```
+
 
 ## Getting Started
 
@@ -40,9 +55,9 @@ Softwares needed to run the tests locally
 
 ```
 Windows OS
-Eclipse IDE for Java Developers for Windows
-JRE 1.8 for Windows
-ChromeDriver 80.0.3987.106 
+JDK 1.8 for Windows
+ChromeDriver compatible with Chrome on your machine
+Maven
 ```
 ## Notes 
 #### Check the version of chrome on local machine and download compatible chromedriver from 
@@ -52,13 +67,10 @@ https://chromedriver.chromium.org/
 
 Replace the downloaded chromedriver.exe with the chromedriver.exe on "src\test\java\drivers" folder
 
-#### Maven is integrated with new versions of Eclipse. If not install Maven plugin for Eclipse
-
-#### If the test is run from command line Maven can be installed from https://maven.apache.org/install.html
 
 ## Running the tests
 
-### Using Eclipse
+### Using IDE
 Clone the repository on Git
 ```
 git clone https://github.com/navarannan/navi_web_auto
@@ -97,3 +109,10 @@ mnv clean
 mvn compile
 mvn test
 ```
+
+### Extent Reports
+
+```
+Check PwC\output foler
+```
+
