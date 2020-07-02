@@ -390,6 +390,8 @@ public class BasePage extends DriverFactory {
 	private static void copyFileUsingStream(File source, File dest) throws IOException {
 		InputStream is = null;
 		OutputStream os = null;
+		System.out.println("Calling copyFileUsingStream()............");
+
 		
 		try {
 			is = new FileInputStream(source);
@@ -398,6 +400,7 @@ public class BasePage extends DriverFactory {
 			int length;
 			
 			while((length = is.read(buffer)) > 0) {
+				System.out.println("Inside while loop....");
 				os.write(buffer, 0, length);
 			}
 			
@@ -408,6 +411,7 @@ public class BasePage extends DriverFactory {
 	}
 	
 	public static void copyLatestExtentReport() throws IOException {
+		System.out.println("Calling copyLatestExtentReport()............");
 		Date d = new Date();
 		String date = d.toString().replace(":", "_").replace(" ", "_");
 		File source = new File(System.getProperty("user.dir") + "\\output\\report.html");

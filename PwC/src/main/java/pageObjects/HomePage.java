@@ -59,9 +59,9 @@ public class HomePage extends BasePage {
 		return new HomePage();
 	}
 
-	public HomePage performSearch(String searchString) throws Exception {
+	public SearchResultsPage performSearch(String searchString) throws Exception {
 		sendKeysToWebElement(searchBar, searchString);
-		return new HomePage();
+		return new SearchResultsPage();
 	}
 
 	public HomePage submitSearch() throws IOException {
@@ -74,8 +74,8 @@ public class HomePage extends BasePage {
 		return new HomePage();
 	}
 
-	public HomePage selectContactUs() throws InterruptedException, IOException {
+	public ContactUsPage selectContactUs() throws InterruptedException, IOException {
 		waitAndClickElement(contactUs);
-		return new HomePage();
+		return new ContactUsPage();
 	}
 }
